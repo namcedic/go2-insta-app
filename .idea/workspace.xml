@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0131f8b6-8380-4a5b-92de-cac124ac9e57" name="Changes" comment="Decrease comment count and fix delete post, delete comment #3">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_11_2022_10_44_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_11_2022_10_44_AM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_12_2022_4_05_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_12_2022_4_05_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_12_2022_4_05_PM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_12_2022_4_05_PM__Changes_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/sql_model.go" beforeDir="false" afterPath="$PROJECT_DIR$/common/sql_model.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/md.env" beforeDir="false" afterPath="$PROJECT_DIR$/md.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/postsearch/postsearchmodel/search.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/postsearch/postsearchmodel/search.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/user/usermodel/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/user/usermodel/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/userfollow/userfollowmodel/user_follow.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/userfollow/userfollowmodel/user_follow.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +28,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="final-v2" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />

@@ -11,7 +11,7 @@ const EntityName = "UserFollow"
 type Follow struct {
 	FollowerId int                `json:"follower_id" gorm:"column:follower_id"`
 	UserId     int                `json:"user_id" gorm:"column:user_id"`
-	CreatedAt  *time.Time         `json:"created_at" gorm:"column:created_at"`
+	CreatedAt  time.Time          `json:"created_at" gorm:"column:created_at"`
 	User       *common.SimpleUser `json:"user" gorm:"preload:false;foreignKey:FollowerId"`
 }
 
@@ -22,7 +22,7 @@ func (Follow) TableName() string {
 type Following struct {
 	FollowerId int                `json:"follower_id" gorm:"column:follower_id"`
 	UserId     int                `json:"user_id" gorm:"column:user_id"`
-	CreatedAt  *time.Time         `json:"created_at" gorm:"column:created_at"`
+	CreatedAt  time.Time          `json:"created_at" gorm:"column:created_at"`
 	User       *common.SimpleUser `json:"user" gorm:"preload:false"`
 }
 
