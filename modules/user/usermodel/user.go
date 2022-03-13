@@ -20,7 +20,7 @@ type User struct {
 	Salt            string        `json:"-" gorm:"column:salt;"`
 	LastName        string        `json:"last_name" gorm:"column:last_name;"`
 	FirstName       string        `json:"first_name" gorm:"column:first_name;"`
-	DateOfBirth     time.Time     `json:"date_of_birth" gorm:"column:date_of_birth"`
+	DateOfBirth     *time.Time    `json:"date_of_birth" gorm:"column:date_of_birth"`
 	Phone           *string       `json:"phone" gorm:"column:phone;"`
 	Role            string        `json:"role" gorm:"column:role;"`
 	Avatar          *common.Image `json:"avatar,omitempty" gorm:"column:avatar;type:json"`
@@ -57,7 +57,7 @@ type UserCreate struct {
 	Salt            string        `json:"-" gorm:"column:salt;"`
 	LastName        string        `json:"last_name" gorm:"column:last_name;"`
 	FirstName       string        `json:"first_name" gorm:"column:first_name;"`
-	DateOfBirth     time.Time     `json:"date_of_birth" gorm:"column:date_of_birth"`
+	DateOfBirth     *time.Time    `json:"date_of_birth" gorm:"column:date_of_birth"`
 	Phone           *string       `json:"phone" gorm:"column:phone;"`
 	Role            string        `json:"role" gorm:"column:role;"`
 	Avatar          *common.Image `json:"avatar,omitempty" gorm:"column:avatar;type:json"`
@@ -110,7 +110,7 @@ type UserUpdate struct {
 	Salt            string        `json:"-" gorm:"column:salt;"`
 	LastName        string        `json:"last_name" gorm:"column:last_name;"`
 	FirstName       string        `json:"first_name" gorm:"column:first_name;"`
-	DateOfBirth     time.Time     `json:"date_of_birth" gorm:"column:date_of_birth"`
+	DateOfBirth     *time.Time    `json:"date_of_birth" gorm:"column:date_of_birth"`
 	Phone           *string       `json:"phone" gorm:"column:phone;"`
 	Avatar          *common.Image `json:"avatar,omitempty" gorm:"column:avatar;type:json"`
 }

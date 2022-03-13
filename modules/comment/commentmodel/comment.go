@@ -67,7 +67,7 @@ type CommentDelete struct {
 }
 
 func (c *CommentDelete) GetPostIdToDecreaseCommentCount() int {
-	return c.CommentId
+	return c.PostId
 }
 
 func (CommentCreate) TableName() string {
