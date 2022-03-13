@@ -1,0 +1,249 @@
+Index: modules/postsearch/postsearchstorage/list.go
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package postsearchstorage\r\n\r\nimport (\r\n\t\"context\"\r\n\t\"instago2/common\"\r\n\t\"instago2/modules/post/postmodel\"\r\n\t\"instago2/modules/postsearch/postsearchmodel\"\r\n)\r\n\r\nfunc (s *sqlStore) ListDataByCondition(ctx context.Context,\r\n\tconditions map[string]interface{},\r\n\tdata *postsearchmodel.DataSearch,\r\n\tfilter *postsearchmodel.Filter,\r\n\tpaging *common.Paging,\r\n\tmoreKeys ...string,\r\n) ([]postmodel.Post, error) {\r\n\tvar result []postmodel.Post\r\n\r\n\tdb := s.db\r\n\r\n\tdb = db.Table(postmodel.Post{}.TableName()).\r\n\t\tWhere(conditions).\r\n\t\tWhere(\"caption like ? AND posts.created_at BETWEEN ? AND ? AND posts.status in (1)\",\r\n\t\t\t*data.Caption, *data.From, *data.To).\r\n\t\tJoins(\"left join users on posts.user_id = users.id\").\r\n\t\tWhere(\"users.user_name like ? OR users.first_name like ? OR users.last_name like ? AND users.status in (1)\",\r\n\t\t\t*data.SearchName, *data.SearchName, *data.SearchName)\r\n\r\n\tif err := db.Count(&paging.Total).Error; err != nil {\r\n\t\treturn nil, common.ErrDB(err)\r\n\t}\r\n\r\n\tfor i := range moreKeys {\r\n\t\tdb = db.Preload(moreKeys[i])\r\n\t}\r\n\r\n\tif v := paging.FakeCursor; v != \"\" {\r\n\t\tif uid, err := common.FromBase58(v); err == nil {\r\n\t\t\tdb = db.Where(\"id < ?\", uid.GetLocalID())\r\n\t\t}\r\n\t} else {\r\n\t\tdb = db.Offset((paging.Page - 1) * paging.Limit)\r\n\t}\r\n\r\n\tif err := db.\r\n\t\tLimit(paging.Limit).\r\n\t\tOrder(\"id desc\").\r\n\t\tFind(&result).Error; err != nil {\r\n\t\treturn nil, common.ErrDB(err)\r\n\t}\r\n\r\n\treturn result, nil\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/modules/postsearch/postsearchstorage/list.go b/modules/postsearch/postsearchstorage/list.go
+--- a/modules/postsearch/postsearchstorage/list.go	
++++ b/modules/postsearch/postsearchstorage/list.go	
+@@ -20,11 +20,27 @@
+ 
+ 	db = db.Table(postmodel.Post{}.TableName()).
+ 		Where(conditions).
+-		Where("caption like ? AND posts.created_at BETWEEN ? AND ? AND posts.status in (1)",
++		Where("caption like ? AND posts.created_at >= ? AND posts.created_at <= ? AND posts.status in (1)",
+ 			*data.Caption, *data.From, *data.To).
+ 		Joins("left join users on posts.user_id = users.id").
+ 		Where("users.user_name like ? OR users.first_name like ? OR users.last_name like ? AND users.status in (1)",
+ 			*data.SearchName, *data.SearchName, *data.SearchName)
++	//db := s.db
++	//db = db.Table(postmodel.Post{}.TableName()).
++	//	Where(conditions)
++	//if data.Caption != nil {
++	//	db.Where("caption like ?", data.Caption)
++	//}
++	//if data.From != nil {
++	//	db.Where("posts.created_at >= ?", AND ? AND posts.status in (1)",
++	//		*data.Caption, *data.From, *data.To).
++	//}
++	//
++	//Where("caption like ? AND posts.created_at BETWEEN ? AND ? AND posts.status in (1)",
++	//	*data.Caption, *data.From, *data.To).
++	//	Joins("left join users on posts.user_id = users.id").
++	//	Where("users.user_name like ? OR users.first_name like ? OR users.last_name like ? AND users.status in (1)",
++	//		*data.SearchName, *data.SearchName, *data.SearchName)
+ 
+ 	if err := db.Count(&paging.Total).Error; err != nil {
+ 		return nil, common.ErrDB(err)
+Index: modules/user/userstorage/find.go
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package userstorage\r\n\r\nimport (\r\n\t\"context\"\r\n\t\"gorm.io/gorm\"\r\n\t\"instago2/common\"\r\n\t\"instago2/modules/user/usermodel\"\r\n)\r\n\r\nfunc (s *sqlStore) FindUser(ctx context.Context, conditions map[string]interface{}, moreInfo ...string) (*usermodel.User, error) {\r\n\tdb := s.db.Table(usermodel.User{}.TableName())\r\n\r\n\tfor i := range moreInfo {\r\n\t\tdb = db.Preload(moreInfo[i])\r\n\t}\r\n\r\n\tvar user usermodel.User\r\n\r\n\tif err := db.Where(conditions).First(&user).Error; err != nil {\r\n\t\tif err == gorm.ErrRecordNotFound {\r\n\t\t\treturn nil, common.RecordNotFound\r\n\t\t}\r\n\r\n\t\treturn nil, common.ErrDB(err)\r\n\t}\r\n\r\n\treturn &user, nil\r\n}\r\n\r\nfunc (s *sqlStore) FindUserByName(\r\n\tctx context.Context,\r\n\tsearchKey string,\r\n\tmoreInfo ...string,\r\n) ([]common.SimpleUser, error) {\r\n\tdb := s.db.Table(usermodel.User{}.TableName())\r\n\r\n\tfor i := range moreInfo {\r\n\t\tdb = db.Preload(moreInfo[i])\r\n\t}\r\n\r\n\tvar user []common.SimpleUser\r\n\r\n\tif err := db.Where(\"user_name LIKE ?\", \"%\"+searchKey+\"%\").Or(\"first_name LIKE ?\", \"%\"+searchKey+\"%\").Or(\"last_name LIKE ?\", \"%\"+searchKey+\"%\").Find(&user).Error; err != nil {\r\n\t\tif err == gorm.ErrRecordNotFound {\r\n\t\t\treturn nil, common.RecordNotFound\r\n\t\t}\r\n\r\n\t\treturn nil, common.ErrDB(err)\r\n\t}\r\n\r\n\treturn user, nil\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/modules/user/userstorage/find.go b/modules/user/userstorage/find.go
+--- a/modules/user/userstorage/find.go	
++++ b/modules/user/userstorage/find.go	
+@@ -30,23 +30,35 @@
+ func (s *sqlStore) FindUserByName(
+ 	ctx context.Context,
+ 	searchKey string,
++	paging *common.Paging,
+ 	moreInfo ...string,
+ ) ([]common.SimpleUser, error) {
++
++	var result []common.SimpleUser
+ 	db := s.db.Table(usermodel.User{}.TableName())
+ 
+-	for i := range moreInfo {
+-		db = db.Preload(moreInfo[i])
+-	}
+-
+-	var user []common.SimpleUser
++	db = db.Where("user_name LIKE ? OR first_name LIKE ? OR last_name LIKE ?",
++		"%"+searchKey+"%", "%"+searchKey+"%", "%"+searchKey+"%").
++		Where("status in (1)")
+ 
+-	if err := db.Where("user_name LIKE ?", "%"+searchKey+"%").Or("first_name LIKE ?", "%"+searchKey+"%").Or("last_name LIKE ?", "%"+searchKey+"%").Find(&user).Error; err != nil {
+-		if err == gorm.ErrRecordNotFound {
+-			return nil, common.RecordNotFound
+-		}
+-
++	if err := db.Count(&paging.Total).Error; err != nil {
+ 		return nil, common.ErrDB(err)
+ 	}
+ 
+-	return user, nil
++	if v := paging.FakeCursor; v != "" {
++		if uid, err := common.FromBase58(v); err == nil {
++			db = db.Where("id < ?", uid.GetLocalID())
++		}
++	} else {
++		db = db.Offset((paging.Page - 1) * paging.Limit)
++	}
++
++	if err := db.
++		Limit(paging.Limit).
++		Order("id desc").
++		Find(&result).Error; err != nil {
++		return nil, common.ErrDB(err)
++	}
++
++	return result, nil
+ }
+Index: subscriber/delete_comment_like_after_delete_comment.go
+===================================================================
+diff --git a/subscriber/delete_comment_like_after_delete_comment.go b/subscriber/delete_comment_like_after_delete_comment.go
+deleted file mode 100644
+--- a/subscriber/delete_comment_like_after_delete_comment.go	
++++ /dev/null	
+@@ -1,23 +0,0 @@
+-package subscriber
+-
+-import (
+-	"context"
+-	"instago2/component"
+-	"instago2/modules/commentlike/commentlikestorage"
+-	"instago2/pubsub"
+-)
+-
+-type HasCommentDeleteId interface {
+-	GetCommmentDeleteId() int
+-}
+-
+-func DeleteCommentLikeAfterDeleteComment(appCtx component.AppContext) consumerJob {
+-	return consumerJob{
+-		Title: "Delete comment like after delete comment",
+-		Hld: func(ctx context.Context, message *pubsub.Message) error {
+-			store := commentlikestorage.NewSQLStore(appCtx.GetMainDBConnection())
+-			deleteData := message.Data().(HasCommentDeleteId)
+-			return store.DeleteAfterDeleteComment(ctx, deleteData.GetCommmentDeleteId())
+-		},
+-	}
+-}
+Index: subscriber/sub.go
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package subscriber\r\n\r\nimport (\r\n\t\"context\"\r\n\t\"instago2/common\"\r\n\t\"instago2/component\"\r\n\t\"instago2/component/asyncjob\"\r\n\t\"instago2/pubsub\"\r\n\t\"log\"\r\n)\r\n\r\ntype consumerJob struct {\r\n\tTitle string\r\n\tHld   func(ctx context.Context, message *pubsub.Message) error\r\n}\r\n\r\ntype consumerEngine struct {\r\n\tappCtx component.AppContext\r\n}\r\n\r\nfunc NewEngine(appContext component.AppContext) *consumerEngine {\r\n\treturn &consumerEngine{appCtx: appContext}\r\n}\r\n\r\nfunc (engine *consumerEngine) Start() error {\r\n\r\n\tengine.startSubTopic(\r\n\t\tcommon.TopicDeletePost,\r\n\t\ttrue,\r\n\t\tDeleteCommentAfterDeletePost(engine.appCtx),\r\n\t\tDeletePostLikeAfterDeletePost(engine.appCtx),\r\n\t\tDeleteCommentLikeAfterDeletePost(engine.appCtx),\r\n\t)\r\n\r\n\tengine.startSubTopic(\r\n\t\tcommon.TopicDeleteComment,\r\n\t\ttrue,\r\n\t\tDeleteCommentLikeAfterDeleteComment(engine.appCtx),\r\n\t)\r\n\r\n\treturn nil\r\n}\r\n\r\ntype GroupJob interface {\r\n\tRun(ctx context.Context) error\r\n}\r\n\r\nfunc (engine *consumerEngine) startSubTopic(topic pubsub.Topic, isConcurrent bool, consumerJobs ...consumerJob) error {\r\n\tc, _ := engine.appCtx.GetPubsub().Subscribe(context.Background(), topic)\r\n\r\n\tfor _, item := range consumerJobs {\r\n\t\tlog.Println(\"Setup consumer for:\", item.Title)\r\n\t}\r\n\r\n\tgetJobHandler := func(job *consumerJob, message *pubsub.Message) asyncjob.JobHandler {\r\n\t\treturn func(ctx context.Context) error {\r\n\t\t\tlog.Println(\"running job for \", job.Title, \". Value: \", message.Data())\r\n\t\t\treturn job.Hld(ctx, message)\r\n\t\t}\r\n\t}\r\n\r\n\tgo func() {\r\n\t\tfor {\r\n\t\t\tmsg := <-c\r\n\r\n\t\t\tjobHdlArr := make([]asyncjob.Job, len(consumerJobs))\r\n\r\n\t\t\tfor i := range consumerJobs {\r\n\t\t\t\tjobHdl := getJobHandler(&consumerJobs[i], msg)\r\n\t\t\t\tjobHdlArr[i] = asyncjob.NewJob(jobHdl)\r\n\t\t\t}\r\n\r\n\t\t\tgroup := asyncjob.NewGroup(isConcurrent, jobHdlArr...)\r\n\r\n\t\t\tif err := group.Run(context.Background()); err != nil {\r\n\t\t\t\tlog.Println(err)\r\n\t\t\t}\r\n\t\t}\r\n\t}()\r\n\r\n\treturn nil\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/subscriber/sub.go b/subscriber/sub.go
+--- a/subscriber/sub.go	
++++ b/subscriber/sub.go	
+@@ -32,12 +32,6 @@
+ 		DeleteCommentLikeAfterDeletePost(engine.appCtx),
+ 	)
+ 
+-	engine.startSubTopic(
+-		common.TopicDeleteComment,
+-		true,
+-		DeleteCommentLikeAfterDeleteComment(engine.appCtx),
+-	)
+-
+ 	return nil
+ }
+ 
+Index: modules/commentlike/commentlikemodel/comment_likes.go
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package commentlikemodel\r\n\r\nimport (\r\n\t\"fmt\"\r\n\t\"instago2/common\"\r\n)\r\n\r\ntype CommentLikes struct {\r\n\tCommentId int                `json:\"comment_id\" gorm:\"column:comment_id;\"`\r\n\tUserId    int                `json:\"user_id\" gorm:\"column:user_id;\"`\r\n\tUser      *common.SimpleUser `json:\"user\" gorm:\"preload:false;\"`\r\n}\r\n\r\nfunc (u *CommentLikes) GetUserId() int {\r\n\treturn u.UserId\r\n}\r\nfunc (u *CommentLikes) GetCommentId() int {\r\n\treturn u.CommentId\r\n}\r\n\r\nfunc (CommentLikes) TableName() string {\r\n\treturn \"commentlike\"\r\n}\r\nfunc ErrCannotLikeComment(err error) *common.AppError {\r\n\treturn common.NewCustomError(\r\n\t\terr,\r\n\t\tfmt.Sprintf(\"Cannot like this comment\"),\r\n\t\tfmt.Sprintf(\"ErrCannotLikeComment\"),\r\n\t)\r\n}\r\n\r\nfunc ErrCannotUnlikeComment(err error) *common.AppError {\r\n\treturn common.NewCustomError(\r\n\t\terr,\r\n\t\tfmt.Sprintf(\"Cannot unlike this comment\"),\r\n\t\tfmt.Sprintf(\"ErrCannotUnlikeComment\"),\r\n\t)\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/modules/commentlike/commentlikemodel/comment_likes.go b/modules/commentlike/commentlikemodel/comment_likes.go
+--- a/modules/commentlike/commentlikemodel/comment_likes.go	
++++ b/modules/commentlike/commentlikemodel/comment_likes.go	
+@@ -19,7 +19,7 @@
+ }
+ 
+ func (CommentLikes) TableName() string {
+-	return "commentlike"
++	return "comment_likes"
+ }
+ func ErrCannotLikeComment(err error) *common.AppError {
+ 	return common.NewCustomError(
+Index: modules/commentlike/commentlikestorage/delete.go
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package commentlikestorage\r\n\r\nimport (\r\n\t\"context\"\r\n\t\"instago2/common\"\r\n\t\"instago2/modules/commentlike/commentlikemodel\"\r\n)\r\n\r\nfunc (s *sqlStore) Delete(ctx context.Context, commentId, userId int) error {\r\n\tdb := s.db\r\n\r\n\tif err := db.Table(commentlikemodel.CommentLikes{}.TableName()).\r\n\t\tWhere(\"comment_id = ? and user_id = ?\", commentId, userId).\r\n\t\tDelete(nil).Error; err != nil {\r\n\t\treturn common.ErrDB(err)\r\n\t}\r\n\treturn nil\r\n}\r\n\r\nfunc (s *sqlStore) DeleteAfterDeleteComment(ctx context.Context, commentId int) error {\r\n\tdb := s.db\r\n\r\n\tif err := db.Table(commentlikemodel.CommentLikes{}.TableName()).\r\n\t\tWhere(\"comment_id = ?\", commentId).\r\n\t\tDelete(nil).Error; err != nil {\r\n\t\treturn common.ErrDB(err)\r\n\t}\r\n\treturn nil\r\n}\r\n\r\nfunc (s *sqlStore) DeleteCommentList(ctx context.Context, postId int) error {\r\n\tdb := s.db\r\n\tif err := db.Table(commentlikemodel.CommentLikes{}.TableName()).\r\n\t\tWhere(\"post_id = ?\", postId).\r\n\t\tDelete(nil).Error; err != nil {\r\n\t\treturn common.ErrDB(err)\r\n\t}\r\n\treturn nil\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/modules/commentlike/commentlikestorage/delete.go b/modules/commentlike/commentlikestorage/delete.go
+--- a/modules/commentlike/commentlikestorage/delete.go	
++++ b/modules/commentlike/commentlikestorage/delete.go	
+@@ -17,17 +17,6 @@
+ 	return nil
+ }
+ 
+-func (s *sqlStore) DeleteAfterDeleteComment(ctx context.Context, commentId int) error {
+-	db := s.db
+-
+-	if err := db.Table(commentlikemodel.CommentLikes{}.TableName()).
+-		Where("comment_id = ?", commentId).
+-		Delete(nil).Error; err != nil {
+-		return common.ErrDB(err)
+-	}
+-	return nil
+-}
+-
+ func (s *sqlStore) DeleteCommentList(ctx context.Context, postId int) error {
+ 	db := s.db
+ 	if err := db.Table(commentlikemodel.CommentLikes{}.TableName()).
+Index: modules/postlike/postlikemodel/post_likes.go
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package postlikemodel\r\n\r\nimport (\r\n\t\"fmt\"\r\n\t\"instago2/common\"\r\n)\r\n\r\ntype PostLikes struct {\r\n\tPostId int                `json:\"post_id\" gorm:\"column:post_id;\"`\r\n\tUserId int                `json:\"user_id\" gorm:\"column:user_id;\"`\r\n\tUser   *common.SimpleUser `json:\"user\" gorm:\"preload:false;\"`\r\n}\r\n\r\nfunc (u *PostLikes) GetUserId() int {\r\n\treturn u.UserId\r\n}\r\nfunc (u *PostLikes) GetPostId() int {\r\n\treturn u.PostId\r\n}\r\n\r\nfunc (PostLikes) TableName() string {\r\n\treturn \"postlike\"\r\n}\r\n\r\nfunc ErrCannotUnlikePost(err error) *common.AppError {\r\n\treturn common.NewCustomError(\r\n\t\terr,\r\n\t\tfmt.Sprintf(\"Cannot unlike this post\"),\r\n\t\tfmt.Sprintf(\"ErrCannotUnlikePost\"),\r\n\t)\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/modules/postlike/postlikemodel/post_likes.go b/modules/postlike/postlikemodel/post_likes.go
+--- a/modules/postlike/postlikemodel/post_likes.go	
++++ b/modules/postlike/postlikemodel/post_likes.go	
+@@ -19,7 +19,7 @@
+ }
+ 
+ func (PostLikes) TableName() string {
+-	return "postlike"
++	return "post_likes"
+ }
+ 
+ func ErrCannotUnlikePost(err error) *common.AppError {
+Index: modules/comment/commentmodel/comment.go
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package commentmodel\r\n\r\nimport (\r\n\t\"errors\"\r\n\t\"instago2/common\"\r\n\t\"strings\"\r\n)\r\n\r\nconst EntityName = \"Comment\"\r\n\r\ntype Comment struct {\r\n\tcommon.SQLModel  `json:\",inline\"`\r\n\tUserId           string             `json:\"user_id\" gorm:\"column:user_id;\"`\r\n\tPostId           string             `json:\"post_id\" gorm:\"column:post_id;\"`\r\n\tParentId         string             `json:\"parent_id\" gorm:\"column:parent_id;\"`\r\n\tContent          string             `json:\"content\" gorm:\"column:content;\"`\r\n\tUser             *common.SimpleUser `json:\"user\" gorm:\"preload:false;\"`\r\n\tCommentLikeCount int                `json:\"comment_like_count\" gorm:\"column:comment_like_count;\"`\r\n}\r\n\r\n// can call directly\r\nfunc (u *Comment) GetCommentId() int {\r\n\treturn u.Id\r\n}\r\n\r\nfunc (u *Comment) GetUserId() string {\r\n\treturn u.UserId\r\n}\r\n\r\nfunc (u *Comment) GetPostId() string {\r\n\treturn u.PostId\r\n}\r\n\r\nfunc (u *Comment) GetParentId() string {\r\n\treturn u.ParentId\r\n}\r\n\r\n// can call directly\r\n\r\nfunc (Comment) TableName() string {\r\n\treturn \"comments\"\r\n}\r\n\r\n//func (u *Comment) Mask(isAdmin bool) {\r\n//\tu.GenUID(common.DbTypeComment)\r\n//}\r\n\r\ntype CommentCreate struct {\r\n\tcommon.SQLModel `json:\",inline\"`\r\n\tUserId          int    `json:\"user_id\" gorm:\"column:user_id;\"`\r\n\tPostId          int    `json:\"post_id\" gorm:\"column:post_id\" form:\"post_id\"`\r\n\tParentId        int    `json:\"parent_id\" gorm:\"column:parent_id\" form:\"parent_id\"`\r\n\tContent         string `json:\"content\" gorm:\"column:content\" form:\"content\"`\r\n}\r\n\r\ntype CommentCreateRequest struct {\r\n\tUserId    int    `json:\"user_id\"`\r\n\tPostId    string `json:\"post_id\" form:\"post_id\"`\r\n\tCommentId string `json:\"comment_id\" form:\"comment_id\"`\r\n\tContent   string `json:\"content\" form:\"content\"`\r\n}\r\n\r\ntype CommentDelete struct {\r\n\tCommentId int `json:\"comment_id\" form:\"id\"`\r\n}\r\n\r\nfunc (c *CommentDelete) GetCommmentDeleteId() int {\r\n\treturn c.CommentId\r\n}\r\n\r\nfunc (CommentCreate) TableName() string {\r\n\treturn Comment{}.TableName()\r\n}\r\n\r\nfunc (u *CommentCreate) Mask(isAdmin bool) {\r\n\tu.GenUID(common.DbTypeComment)\r\n}\r\n\r\nfunc (res *CommentCreate) Validate() error {\r\n\tres.Content = strings.TrimSpace(res.Content)\r\n\r\n\tif len(res.Content) == 0 {\r\n\t\treturn ErrCannotReplyAReply\r\n\t}\r\n\r\n\treturn nil\r\n}\r\n\r\nvar (\r\n\tErrCannotReplyAReply = common.NewCustomError(nil, \"can not reply a reply\", \"ErrCannotReplyAReply\")\r\n)\r\n\r\nfunc (data *Comment) Mask(isAdminOrOwner bool) {\r\n\tdata.GenUID(common.DbTypeComment)\r\n\r\n\tif u := data.User; u != nil {\r\n\t\tu.Mask(isAdminOrOwner)\r\n\t}\r\n}\r\n\r\nvar (\r\n\tErrCannotReplyComment = common.NewCustomError(\r\n\t\terrors.New(\"Can not reply comment\"),\r\n\t\t\"Can not reply comment\",\r\n\t\t\"ErrCannotReplyComment\",\r\n\t)\r\n)\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/modules/comment/commentmodel/comment.go b/modules/comment/commentmodel/comment.go
+--- a/modules/comment/commentmodel/comment.go	
++++ b/modules/comment/commentmodel/comment.go	
+@@ -62,6 +62,7 @@
+ 
+ type CommentDelete struct {
+ 	CommentId int `json:"comment_id" form:"id"`
++	UserId    int `json:"user_id" form:"user_id"`
+ }
+ 
+ func (c *CommentDelete) GetCommmentDeleteId() int {
+Index: md.env
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>DBCONNECTIONSTR = root:sa123456@tcp(127.0.0.1:3306)/insta?charset=utf8mb4&parseTime=True&loc=Local\r\nS3BUCKETNAME = food-go\r\nS3REGION = ap-southeast-1\r\nS3APIKEY = AKIAUS2KPLDJUOXE22X2\r\nS3SECRETKEY = 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\r\nS3DOMAIN = https://d1n632kj3y4onx.cloudfront.net\r\nLOGINSECRETKEY= Oksdfksdfhch
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/md.env b/md.env
+--- a/md.env	
++++ b/md.env	
+@@ -1,4 +1,4 @@
+-DBCONNECTIONSTR = root:sa123456@tcp(127.0.0.1:3306)/insta?charset=utf8mb4&parseTime=True&loc=Local
++DBCONNECTIONSTR = root:123456789@tcp(127.0.0.1:3366)/insta?charset=utf8mb4&parseTime=True&loc=Local
+ S3BUCKETNAME = food-go
+ S3REGION = ap-southeast-1
+ S3APIKEY = AKIAUS2KPLDJUOXE22X2

@@ -1,0 +1,472 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"ALL\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"0131f8b6-8380-4a5b-92de-cac124ac9e57\" name=\"Changes\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/docs/docs.go\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/docs/docs.go\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/docs/swagger.json\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/docs/swagger.json\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/docs/swagger.yaml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/docs/swagger.yaml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/md.env\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/md.env\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/modules/comment/transport/gincomment/comment_transport.go\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/modules/comment/transport/gincomment/comment_transport.go\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/modules/comment/transport/gincomment/delete_comment.go\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/modules/comment/transport/gincomment/delete_comment.go\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/modules/comment/transport/ginreplycomment/list_comment.go\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/modules/comment/transport/ginreplycomment/list_comment.go\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/modules/comment/transport/ginreplycomment/reply_transport.go\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/modules/comment/transport/ginreplycomment/reply_transport.go\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/modules/commentlike/commentliketransport/commentlikes_transport.go\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/modules/commentlike/commentliketransport/commentlikes_transport.go\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/modules/commentlike/commentliketransport/unlike_comment.go\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/modules/commentlike/commentliketransport/unlike_comment.go\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/modules/post/posttransport/ginpost/get_post.go\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/modules/post/posttransport/ginpost/get_post.go\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/modules/post/posttransport/ginpost/list_following_post.go\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/modules/post/posttransport/ginpost/list_following_post.go\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/modules/post/posttransport/ginpost/list_post.go\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/modules/post/posttransport/ginpost/list_post.go\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/modules/postlike/postliketransport/postlikes_transport.go\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/modules/postlike/postliketransport/postlikes_transport.go\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/modules/postlike/postliketransport/unlike_comment.go\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/modules/postlike/postliketransport/unlike_comment.go\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/modules/postsearch/postsearchtransport/ginpostsearch/list_post_search.go\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/modules/postsearch/postsearchtransport/ginpostsearch/list_post_search.go\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Go File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"GOROOT\" url=\"file://C:/Program Files/Go\" />\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitSEFilterConfiguration\">\r\n    <file-type-list>\r\n      <filtered-out-file-type name=\"LOCAL_BRANCH\" />\r\n      <filtered-out-file-type name=\"REMOTE_BRANCH\" />\r\n      <filtered-out-file-type name=\"TAG\" />\r\n      <filtered-out-file-type name=\"COMMIT_BY_MESSAGE\" />\r\n    </file-type-list>\r\n  </component>\r\n  <component name=\"GoLibraries\">\r\n    <option name=\"indexEntireGoPath\" value=\"false\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"25Yf3LxQllyL7K73D5WHtuT2IWV\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"DefaultGoTemplateProperty\" value=\"Go File\" />\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"go.format.on.save.advertiser.fired\" value=\"true\" />\r\n    <property name=\"go.formatter.settings.were.checked\" value=\"true\" />\r\n    <property name=\"go.import.settings.migrated\" value=\"true\" />\r\n    <property name=\"go.modules.go.list.on.any.changes.was.set\" value=\"true\" />\r\n    <property name=\"go.sdk.automatically.set\" value=\"true\" />\r\n    <property name=\"go.watchers.conflict.with.on.save.actions.check.performed\" value=\"true\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\PC\\OneDrive\\Máy tính\\Go2insta\\golang-2-final-exam\\modules\\user\\usertransport\\ginuser\" />\r\n      <recent name=\"C:\\Users\\PC\\OneDrive\\Máy tính\\Go2insta\\golang-2-final-exam\\modules\\user\\userbiz\" />\r\n      <recent name=\"C:\\Users\\Admin\\go\\src\\golang-2-final-exam\\modules\\post\\posttransport\\ginpost\" />\r\n      <recent name=\"C:\\Users\\Admin\\go\\src\\golang-2-final-exam\\modules\\post\\poststorage\" />\r\n      <recent name=\"C:\\Users\\Admin\\go\\src\\golang-2-final-exam\\modules\\post\\postbiz\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Admin\\go\\src\\golang-2-final-exam\\modules\\comment\\transport\\ginreplycomment\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration default=\"true\" type=\"GoApplicationRunConfiguration\" factoryName=\"Go Application\">\r\n      <module name=\"golang-2-final-exam\" />\r\n      <working_directory value=\"$PROJECT_DIR$\" />\r\n      <kind value=\"PACKAGE\" />\r\n      <package value=\"golang-2-final-exam\" />\r\n      <directory value=\"$PROJECT_DIR$\" />\r\n      <filePath value=\"$PROJECT_DIR$\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"go build instago2\" type=\"GoApplicationRunConfiguration\" factoryName=\"Go Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"golang-2-final-exam\" />\r\n      <working_directory value=\"$PROJECT_DIR$\" />\r\n      <kind value=\"PACKAGE\" />\r\n      <package value=\"instago2\" />\r\n      <directory value=\"$PROJECT_DIR$\" />\r\n      <filePath value=\"$PROJECT_DIR$/main.go\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"GoTestRunConfiguration\" factoryName=\"Go Test\">\r\n      <module name=\"golang-2-final-exam\" />\r\n      <working_directory value=\"$PROJECT_DIR$\" />\r\n      <kind value=\"DIRECTORY\" />\r\n      <package value=\"golang-2-final-exam\" />\r\n      <directory value=\"$PROJECT_DIR$\" />\r\n      <filePath value=\"$PROJECT_DIR$\" />\r\n      <framework value=\"gotest\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Go Build.go build instago2\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VgoProject\">\r\n    <integration-enabled>true</integration-enabled>\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/middleware/authorize.go</url>\r\n          <line>67</line>\r\n          <option name=\"timeStamp\" value=\"16\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/comment/transport/ginreplycomment/reply_transport.go</url>\r\n          <line>42</line>\r\n          <option name=\"timeStamp\" value=\"33\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/comment/biz/create_reply.go</url>\r\n          <line>22</line>\r\n          <option name=\"timeStamp\" value=\"38\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/comment/biz/create_reply.go</url>\r\n          <line>24</line>\r\n          <option name=\"timeStamp\" value=\"39\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/comment/biz/create_reply.go</url>\r\n          <line>25</line>\r\n          <option name=\"timeStamp\" value=\"40\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/comment/biz/create_reply.go</url>\r\n          <line>27</line>\r\n          <option name=\"timeStamp\" value=\"41\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/comment/biz/create_reply.go</url>\r\n          <line>28</line>\r\n          <option name=\"timeStamp\" value=\"42\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/comment/biz/create_reply.go</url>\r\n          <line>30</line>\r\n          <option name=\"timeStamp\" value=\"43\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/comment/biz/create_reply.go</url>\r\n          <line>31</line>\r\n          <option name=\"timeStamp\" value=\"44\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/comment/biz/create_reply.go</url>\r\n          <line>33</line>\r\n          <option name=\"timeStamp\" value=\"45\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/comment/biz/create_reply.go</url>\r\n          <line>35</line>\r\n          <option name=\"timeStamp\" value=\"46\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/post/posttransport/ginpost/list_post.go</url>\r\n          <line>24</line>\r\n          <option name=\"timeStamp\" value=\"48\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/post/posttransport/ginpost/list_post.go</url>\r\n          <line>26</line>\r\n          <option name=\"timeStamp\" value=\"50\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/post/posttransport/ginpost/list_post.go</url>\r\n          <line>28</line>\r\n          <option name=\"timeStamp\" value=\"51\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/post/posttransport/ginpost/list_post.go</url>\r\n          <line>35</line>\r\n          <option name=\"timeStamp\" value=\"52\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/post/posttransport/ginpost/list_post.go</url>\r\n          <line>38</line>\r\n          <option name=\"timeStamp\" value=\"53\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/post/posttransport/ginpost/list_post.go</url>\r\n          <line>42</line>\r\n          <option name=\"timeStamp\" value=\"54\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/upload/uploadtransport/ginupload/upload_file.go</url>\r\n          <line>15</line>\r\n          <option name=\"timeStamp\" value=\"66\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/upload/uploadtransport/ginupload/upload_file.go</url>\r\n          <line>18</line>\r\n          <option name=\"timeStamp\" value=\"67\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/upload/uploadtransport/ginupload/upload_file.go</url>\r\n          <line>17</line>\r\n          <option name=\"timeStamp\" value=\"68\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/upload/uploadtransport/ginupload/upload_file.go</url>\r\n          <line>21</line>\r\n          <option name=\"timeStamp\" value=\"69\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/upload/uploadtransport/ginupload/upload_file.go</url>\r\n          <line>23</line>\r\n          <option name=\"timeStamp\" value=\"70\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/upload/uploadtransport/ginupload/upload_file.go</url>\r\n          <line>25</line>\r\n          <option name=\"timeStamp\" value=\"71\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/upload/uploadtransport/ginupload/upload_file.go</url>\r\n          <line>29</line>\r\n          <option name=\"timeStamp\" value=\"72\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/upload/uploadtransport/ginupload/upload_file.go</url>\r\n          <line>31</line>\r\n          <option name=\"timeStamp\" value=\"73\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/upload/uploadtransport/ginupload/upload_file.go</url>\r\n          <line>32</line>\r\n          <option name=\"timeStamp\" value=\"74\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/upload/uploadtransport/ginupload/upload_file.go</url>\r\n          <line>37</line>\r\n          <option name=\"timeStamp\" value=\"76\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/upload/uploadtransport/ginupload/upload_file.go</url>\r\n          <line>38</line>\r\n          <option name=\"timeStamp\" value=\"77\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/upload/uploadtransport/ginupload/upload_file.go</url>\r\n          <line>40</line>\r\n          <option name=\"timeStamp\" value=\"78\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/upload/uploadtransport/ginupload/upload_file.go</url>\r\n          <line>43</line>\r\n          <option name=\"timeStamp\" value=\"79\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/main.go</url>\r\n          <line>95</line>\r\n          <option name=\"timeStamp\" value=\"80\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/post/posttransport/ginpost/list_following_post.go</url>\r\n          <line>42</line>\r\n          <option name=\"timeStamp\" value=\"92\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/post/posttransport/ginpost/list_following_post.go</url>\r\n          <line>38</line>\r\n          <option name=\"timeStamp\" value=\"93\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/post/postbiz/list_following_post.go</url>\r\n          <line>29</line>\r\n          <option name=\"timeStamp\" value=\"97\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/post/postbiz/list_following_post.go</url>\r\n          <line>35</line>\r\n          <option name=\"timeStamp\" value=\"100\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/post/poststorage/list_following.go</url>\r\n          <line>12</line>\r\n          <option name=\"timeStamp\" value=\"101\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/post/poststorage/list_following.go</url>\r\n          <line>14</line>\r\n          <option name=\"timeStamp\" value=\"102\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/post/poststorage/list_following.go</url>\r\n          <line>19</line>\r\n          <option name=\"timeStamp\" value=\"106\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/post/poststorage/list_following.go</url>\r\n          <line>24</line>\r\n          <option name=\"timeStamp\" value=\"108\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/post/poststorage/list_following.go</url>\r\n          <line>23</line>\r\n          <option name=\"timeStamp\" value=\"109\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/post/poststorage/list_following.go</url>\r\n          <line>27</line>\r\n          <option name=\"timeStamp\" value=\"110\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/post/poststorage/list_following.go</url>\r\n          <line>28</line>\r\n          <option name=\"timeStamp\" value=\"111\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/post/poststorage/list_following.go</url>\r\n          <line>29</line>\r\n          <option name=\"timeStamp\" value=\"112\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/post/poststorage/list_following.go</url>\r\n          <line>32</line>\r\n          <option name=\"timeStamp\" value=\"113\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/modules/post/poststorage/list_following.go</url>\r\n          <line>42</line>\r\n          <option name=\"timeStamp\" value=\"114\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/../../pkg/mod/gorm.io/gorm@v1.22.5/finisher_api.go</url>\r\n          <line>157</line>\r\n          <option name=\"timeStamp\" value=\"115\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/../../pkg/mod/gorm.io/gorm@v1.22.5/finisher_api.go</url>\r\n          <line>161</line>\r\n          <option name=\"timeStamp\" value=\"116\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/../../pkg/mod/gorm.io/gorm@v1.22.5/finisher_api.go</url>\r\n          <line>164</line>\r\n          <option name=\"timeStamp\" value=\"117\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/../../pkg/mod/gorm.io/gorm@v1.22.5/finisher_api.go</url>\r\n          <line>165</line>\r\n          <option name=\"timeStamp\" value=\"118\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/../../pkg/mod/gorm.io/gorm@v1.22.5/finisher_api.go</url>\r\n          <line>158</line>\r\n          <option name=\"timeStamp\" value=\"119\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/../../pkg/mod/gorm.io/gorm@v1.22.5/statement.go</url>\r\n          <line>277</line>\r\n          <option name=\"timeStamp\" value=\"120\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/../../pkg/mod/gorm.io/gorm@v1.22.5/statement.go</url>\r\n          <line>279</line>\r\n          <option name=\"timeStamp\" value=\"121\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/../../pkg/mod/gorm.io/gorm@v1.22.5/statement.go</url>\r\n          <line>280</line>\r\n          <option name=\"timeStamp\" value=\"122\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/../../pkg/mod/gorm.io/gorm@v1.22.5/statement.go</url>\r\n          <line>284</line>\r\n          <option name=\"timeStamp\" value=\"123\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/../../pkg/mod/gorm.io/gorm@v1.22.5/statement.go</url>\r\n          <line>286</line>\r\n          <option name=\"timeStamp\" value=\"124\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/../../pkg/mod/gorm.io/gorm@v1.22.5/statement.go</url>\r\n          <line>289</line>\r\n          <option name=\"timeStamp\" value=\"125\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/../../pkg/mod/gorm.io/gorm@v1.22.5/statement.go</url>\r\n          <line>294</line>\r\n          <option name=\"timeStamp\" value=\"126\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/../../pkg/mod/gorm.io/gorm@v1.22.5/statement.go</url>\r\n          <line>299</line>\r\n          <option name=\"timeStamp\" value=\"127\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/../../pkg/mod/gorm.io/gorm@v1.22.5/statement.go</url>\r\n          <line>303</line>\r\n          <option name=\"timeStamp\" value=\"128\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/../../pkg/mod/gorm.io/gorm@v1.22.5/statement.go</url>\r\n          <line>447</line>\r\n          <option name=\"timeStamp\" value=\"129\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/../../pkg/mod/gorm.io/gorm@v1.22.5/statement.go</url>\r\n          <line>442</line>\r\n          <option name=\"timeStamp\" value=\"130\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"DlvLineBreakpoint\">\r\n          <url>file://$PROJECT_DIR$/main.go</url>\r\n          <line>97</line>\r\n          <option name=\"timeStamp\" value=\"131\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n    <watches-manager>\r\n      <configuration name=\"GoApplicationRunConfiguration\">\r\n        <watch expression=\"*(*&quot;gorm.io/gorm/clause.IN&quot;)(824634434064)\" />\r\n      </configuration>\r\n    </watches-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,24 +4,35 @@
+     <option name="autoReloadType" value="ALL" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="0131f8b6-8380-4a5b-92de-cac124ac9e57" name="Changes" comment="">
++    <list default="true" id="0131f8b6-8380-4a5b-92de-cac124ac9e57" name="Changes" comment="Deploy project to Heroku">
++      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_3_2022_1_35_PM_[Changes]/shelved.patch" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_3_2022_1_35_PM__Changes_.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_3_2022_12_09_AM_[Changes]/shelved.patch" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_3_2022_12_09_AM__Changes_.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/common/pubsub_topic.go" beforeDir="false" afterPath="$PROJECT_DIR$/common/pubsub_topic.go" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/docs/docs.go" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docs.go" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/docs/swagger.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/swagger.json" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/docs/swagger.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/swagger.yaml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/md.env" beforeDir="false" afterPath="$PROJECT_DIR$/md.env" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/modules/comment/transport/gincomment/comment_transport.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/comment/transport/gincomment/comment_transport.go" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/modules/comment/commentbiz/delete_comment.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/comment/commentbiz/delete_comment.go" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/modules/comment/commentmodel/comment.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/comment/commentmodel/comment.go" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/modules/comment/commentstorage/delete.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/comment/commentstorage/delete.go" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/modules/comment/commentstorage/find.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/comment/commentstorage/find.go" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/modules/comment/transport/gincomment/delete_comment.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/comment/transport/gincomment/delete_comment.go" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/modules/comment/transport/ginreplycomment/list_comment.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/comment/transport/ginreplycomment/list_comment.go" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/modules/comment/transport/ginreplycomment/reply_transport.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/comment/transport/ginreplycomment/reply_transport.go" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/modules/commentlike/commentliketransport/commentlikes_transport.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/commentlike/commentliketransport/commentlikes_transport.go" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/modules/commentlike/commentliketransport/unlike_comment.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/commentlike/commentliketransport/unlike_comment.go" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/modules/post/posttransport/ginpost/get_post.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/post/posttransport/ginpost/get_post.go" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/modules/post/posttransport/ginpost/list_following_post.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/post/posttransport/ginpost/list_following_post.go" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/modules/post/posttransport/ginpost/list_post.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/post/posttransport/ginpost/list_post.go" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/modules/postlike/postliketransport/postlikes_transport.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/postlike/postliketransport/postlikes_transport.go" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/modules/postlike/postliketransport/unlike_comment.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/postlike/postliketransport/unlike_comment.go" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/modules/postsearch/postsearchtransport/ginpostsearch/list_post_search.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/postsearch/postsearchtransport/ginpostsearch/list_post_search.go" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/modules/commentlike/commentlikemodel/comment_likes.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/commentlike/commentlikemodel/comment_likes.go" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/modules/commentlike/commentlikestorage/delete.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/commentlike/commentlikestorage/delete.go" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/modules/post/postbiz/delete_post.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/post/postbiz/delete_post.go" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/modules/post/poststorage/find.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/post/poststorage/find.go" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/modules/postlike/postlikemodel/post_likes.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/postlike/postlikemodel/post_likes.go" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/modules/postsearch/postsearchbiz/list_post_search.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/postsearch/postsearchbiz/list_post_search.go" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/modules/postsearch/postsearchstorage/list.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/postsearch/postsearchstorage/list.go" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/modules/user/userbiz/search_by_name.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/user/userbiz/search_by_name.go" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/modules/user/userstorage/find.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/user/userstorage/find.go" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/modules/user/usertransport/ginuser/search_by_name.go" beforeDir="false" afterPath="$PROJECT_DIR$/modules/user/usertransport/ginuser/search_by_name.go" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/subscriber/delete_comment_like_after_delete_comment.go" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/subscriber/sub.go" beforeDir="false" afterPath="$PROJECT_DIR$/subscriber/sub.go" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -35,7 +46,7 @@
+       </list>
+     </option>
+   </component>
+-  <component name="GOROOT" url="file://C:/Program Files/Go" />
++  <component name="GOROOT" url="file://$PROJECT_DIR$/../../../../../Program Files/Go" />
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+@@ -449,6 +460,136 @@
+           <url>file://$PROJECT_DIR$/main.go</url>
+           <line>97</line>
+           <option name="timeStamp" value="131" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
++          <url>file://$PROJECT_DIR$/modules/comment/commentbiz/delete_comment.go</url>
++          <line>10</line>
++          <option name="timeStamp" value="150" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
++          <url>file://$PROJECT_DIR$/modules/user/userstorage/find.go</url>
++          <line>36</line>
++          <option name="timeStamp" value="151" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
++          <url>file://$PROJECT_DIR$/modules/user/userstorage/find.go</url>
++          <line>40</line>
++          <option name="timeStamp" value="152" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
++          <url>file://$PROJECT_DIR$/modules/user/userstorage/find.go</url>
++          <line>44</line>
++          <option name="timeStamp" value="153" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
++          <url>file://$PROJECT_DIR$/modules/user/userstorage/find.go</url>
++          <line>48</line>
++          <option name="timeStamp" value="154" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
++          <url>file://$PROJECT_DIR$/modules/user/userstorage/find.go</url>
++          <line>52</line>
++          <option name="timeStamp" value="155" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
++          <url>file://$PROJECT_DIR$/modules/user/userstorage/find.go</url>
++          <line>57</line>
++          <option name="timeStamp" value="156" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
++          <url>file://$PROJECT_DIR$/modules/user/userstorage/find.go</url>
++          <line>60</line>
++          <option name="timeStamp" value="157" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
++          <url>file://$PROJECT_DIR$/modules/user/userstorage/find.go</url>
++          <line>62</line>
++          <option name="timeStamp" value="158" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
++          <url>file://$PROJECT_DIR$/modules/user/userbiz/search_by_name.go</url>
++          <line>27</line>
++          <option name="timeStamp" value="159" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
++          <url>file://$PROJECT_DIR$/modules/user/userbiz/search_by_name.go</url>
++          <line>29</line>
++          <option name="timeStamp" value="160" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
++          <url>file://$PROJECT_DIR$/modules/user/userbiz/search_by_name.go</url>
++          <line>31</line>
++          <option name="timeStamp" value="161" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
++          <url>file://$PROJECT_DIR$/modules/user/usertransport/ginuser/search_by_name.go</url>
++          <line>36</line>
++          <option name="timeStamp" value="162" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
++          <url>file://$PROJECT_DIR$/modules/user/usertransport/ginuser/search_by_name.go</url>
++          <line>31</line>
++          <option name="timeStamp" value="163" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
++          <url>file://$PROJECT_DIR$/modules/user/usertransport/ginuser/search_by_name.go</url>
++          <line>26</line>
++          <option name="timeStamp" value="164" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
++          <url>file://$PROJECT_DIR$/modules/user/usertransport/ginuser/search_by_name.go</url>
++          <line>41</line>
++          <option name="timeStamp" value="165" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
++          <url>file://$PROJECT_DIR$/modules/user/usertransport/ginuser/search_by_name.go</url>
++          <line>42</line>
++          <option name="timeStamp" value="167" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
++          <url>file://$PROJECT_DIR$/modules/post/postbiz/list_post.go</url>
++          <line>28</line>
++          <option name="timeStamp" value="168" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
++          <url>file://$PROJECT_DIR$/modules/post/poststorage/list.go</url>
++          <line>16</line>
++          <option name="timeStamp" value="169" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
++          <url>file://$PROJECT_DIR$/modules/post/poststorage/list.go</url>
++          <line>27</line>
++          <option name="timeStamp" value="170" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
++          <url>file://$PROJECT_DIR$/modules/post/poststorage/list.go</url>
++          <line>39</line>
++          <option name="timeStamp" value="172" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
++          <url>file://$PROJECT_DIR$/modules/post/poststorage/list.go</url>
++          <line>29</line>
++          <option name="timeStamp" value="173" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
++          <url>file://$PROJECT_DIR$/modules/post/poststorage/list.go</url>
++          <line>28</line>
++          <option name="timeStamp" value="174" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
++          <url>file://$PROJECT_DIR$/modules/post/poststorage/list.go</url>
++          <line>36</line>
++          <option name="timeStamp" value="175" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
++          <url>file://$PROJECT_DIR$/modules/post/poststorage/list.go</url>
++          <line>37</line>
++          <option name="timeStamp" value="176" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
++          <url>file://$PROJECT_DIR$/modules/post/poststorage/list.go</url>
++          <line>35</line>
++          <option name="timeStamp" value="177" />
+         </line-breakpoint>
+       </breakpoints>
+     </breakpoint-manager>
+Index: modules/post/poststorage/find.go
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package poststorage\r\n\r\nimport (\r\n\t\"context\"\r\n\t\"gorm.io/gorm\"\r\n\t\"instago2/common\"\r\n\t\"instago2/modules/post/postmodel\"\r\n)\r\n\r\nfunc (s *sqlStore) FindDataByCondition(\r\n\tctx context.Context,\r\n\tconditions map[string]interface{},\r\n\tmoreKeys ...string,\r\n) (*postmodel.Post, error) {\r\n\tvar result postmodel.Post\r\n\r\n\tdb := s.db\r\n\r\n\tdb = db.Preload(\"User\")\r\n\r\n\tif err := db.Where(conditions).\r\n\t\tFirst(&result).Error; err != nil {\r\n\t\tif err == gorm.ErrRecordNotFound {\r\n\t\t\treturn nil, common.RecordNotFound\r\n\t\t}\r\n\t\treturn nil, common.ErrDB(err)\r\n\t}\r\n\r\n\treturn &result, nil\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/modules/post/poststorage/find.go b/modules/post/poststorage/find.go
+--- a/modules/post/poststorage/find.go	
++++ b/modules/post/poststorage/find.go	
+@@ -18,7 +18,7 @@
+ 
+ 	db = db.Preload("User")
+ 
+-	if err := db.Where(conditions).
++	if err := db.Where(conditions).Where("status in (1)").
+ 		First(&result).Error; err != nil {
+ 		if err == gorm.ErrRecordNotFound {
+ 			return nil, common.RecordNotFound
+Index: modules/comment/commentstorage/find.go
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package commentstorage\r\n\r\nimport (\r\n\t\"context\"\r\n\t\"gorm.io/gorm\"\r\n\t\"instago2/common\"\r\n\t\"instago2/modules/comment/commentmodel\"\r\n)\r\n\r\nfunc (s *sqlStore) FindCommentIsAllowed(ctx context.Context,\r\n\tconditions map[string]interface{},\r\n\tmoreInfo ...string) (*commentmodel.CommentCreate, error) {\r\n\tdb := s.db.Table(commentmodel.CommentCreate{}.TableName())\r\n\r\n\tfor i := range moreInfo {\r\n\t\tdb = db.Preload(moreInfo[i])\r\n\t}\r\n\r\n\tvar allowReply commentmodel.CommentCreate\r\n\r\n\tif err := db.Where(conditions).First(&allowReply).Error; err != nil {\r\n\t\tif err == gorm.ErrRecordNotFound {\r\n\t\t\treturn nil, common.RecordNotFound\r\n\t\t}\r\n\r\n\t\treturn nil, common.ErrDB(err)\r\n\t}\r\n\r\n\treturn &allowReply, nil\r\n}\r\n\r\nfunc (s *sqlStore) FindDataByCondition(\r\n\tctx context.Context,\r\n\tdata *commentmodel.CommentDelete,\r\n\tmoreKeys ...string,\r\n) (*commentmodel.Comment, error) {\r\n\tvar result commentmodel.Comment\r\n\r\n\tdb := s.db\r\n\r\n\tfor i := range moreKeys {\r\n\t\tdb = db.Preload(moreKeys[i])\r\n\t}\r\n\r\n\tif err := db.Where(\"id = ? AND status in (1)\", data.CommentId).\r\n\t\tFirst(&result).Error; err != nil {\r\n\t\tif err == gorm.ErrRecordNotFound {\r\n\t\t\treturn nil, common.RecordNotFound\r\n\t\t}\r\n\t\treturn nil, common.ErrDB(err)\r\n\t}\r\n\r\n\treturn &result, nil\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/modules/comment/commentstorage/find.go b/modules/comment/commentstorage/find.go
+--- a/modules/comment/commentstorage/find.go	
++++ b/modules/comment/commentstorage/find.go	
+@@ -42,7 +42,7 @@
+ 		db = db.Preload(moreKeys[i])
+ 	}
+ 
+-	if err := db.Where("id = ? AND status in (1)", data.CommentId).
++	if err := db.Where("id = ? AND user_id = ? AND status in (1)", data.CommentId, data.UserId).
+ 		First(&result).Error; err != nil {
+ 		if err == gorm.ErrRecordNotFound {
+ 			return nil, common.RecordNotFound
+Index: modules/user/userbiz/search_by_name.go
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package userbiz\r\n\r\nimport (\r\n\t\"context\"\r\n\t\"instago2/common\"\r\n)\r\n\r\ntype SearchUserByName interface {\r\n\tFindUserByName(\r\n\t\tctx context.Context,\r\n\t\tsearchKey string,\r\n\t\tmoreKeys ...string,\r\n\t) ([]common.SimpleUser, error)\r\n}\r\n\r\ntype searchUserByNameBiz struct {\r\n\tstore SearchUserByName\r\n}\r\n\r\nfunc SearchUserByNameBiz(store SearchUserByName) *searchUserByNameBiz {\r\n\treturn &searchUserByNameBiz{store: store}\r\n}\r\n\r\nfunc (biz *searchUserByNameBiz) SearchUserByName(ctx context.Context, searchKey string) ([]common.SimpleUser, error) {\r\n\tdata, err := biz.store.FindUserByName(ctx, searchKey)\r\n\r\n\tif err != nil {\r\n\t\treturn nil, common.ErrCannotGetEntity(\"There is no result !\", err)\r\n\t}\r\n\treturn data, err\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/modules/user/userbiz/search_by_name.go b/modules/user/userbiz/search_by_name.go
+--- a/modules/user/userbiz/search_by_name.go	
++++ b/modules/user/userbiz/search_by_name.go	
+@@ -3,12 +3,14 @@
+ import (
+ 	"context"
+ 	"instago2/common"
++	"instago2/modules/user/usermodel"
+ )
+ 
+ type SearchUserByName interface {
+ 	FindUserByName(
+ 		ctx context.Context,
+ 		searchKey string,
++		paging *common.Paging,
+ 		moreKeys ...string,
+ 	) ([]common.SimpleUser, error)
+ }
+@@ -21,11 +23,12 @@
+ 	return &searchUserByNameBiz{store: store}
+ }
+ 
+-func (biz *searchUserByNameBiz) SearchUserByName(ctx context.Context, searchKey string) ([]common.SimpleUser, error) {
+-	data, err := biz.store.FindUserByName(ctx, searchKey)
++func (biz *searchUserByNameBiz) SearchUser(ctx context.Context,
++	searchKey string, paging *common.Paging) ([]common.SimpleUser, error) {
++	data, err := biz.store.FindUserByName(ctx, searchKey, paging)
+ 
+ 	if err != nil {
+-		return nil, common.ErrCannotGetEntity("There is no result !", err)
++		return nil, common.ErrCannotGetEntity(usermodel.EntityName, err)
+ 	}
+ 	return data, err
+ }
+Index: modules/comment/commentbiz/delete_comment.go
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package commentbiz\r\n\r\nimport (\r\n\t\"context\"\r\n\t\"instago2/common\"\r\n\t\"instago2/modules/comment/commentmodel\"\r\n\t\"instago2/pubsub\"\r\n)\r\n\r\ntype DeleteCommentStore interface {\r\n\tFindDataByCondition(\r\n\t\tctx context.Context,\r\n\t\tdata *commentmodel.CommentDelete,\r\n\t\tmoreKeys ...string,\r\n\t) (*commentmodel.Comment, error)\r\n\tSoftDeleteData(\r\n\t\tctx context.Context,\r\n\t\tid int,\r\n\t) error\r\n}\r\n\r\ntype deleteCommentBiz struct {\r\n\tstore  DeleteCommentStore\r\n\tpubsub pubsub.Pubsub\r\n}\r\n\r\nfunc NewDeleteCommentBiz(store DeleteCommentStore, pubsub pubsub.Pubsub) *deleteCommentBiz {\r\n\treturn &deleteCommentBiz{store: store, pubsub: pubsub}\r\n}\r\n\r\nfunc (biz *deleteCommentBiz) DeleteComment(ctx context.Context, data *commentmodel.CommentDelete) error {\r\n\toldData, err := biz.store.FindDataByCondition(ctx, data)\r\n\r\n\tif err != nil {\r\n\t\treturn common.ErrCannotGetEntity(commentmodel.EntityName, err)\r\n\t}\r\n\r\n\tif oldData.Status == 0 {\r\n\t\treturn common.ErrEntityDeleted(commentmodel.EntityName, nil)\r\n\t}\r\n\r\n\tbiz.pubsub.Publish(ctx, common.TopicDeleteComment, pubsub.NewMessage(data))\r\n\r\n\tif err := biz.store.SoftDeleteData(ctx, data.CommentId); err != nil {\r\n\t\treturn common.ErrCannotDeleteEntity(commentmodel.EntityName, err)\r\n\t}\r\n\r\n\treturn nil\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/modules/comment/commentbiz/delete_comment.go b/modules/comment/commentbiz/delete_comment.go
+--- a/modules/comment/commentbiz/delete_comment.go	
++++ b/modules/comment/commentbiz/delete_comment.go	
+@@ -15,7 +15,7 @@
+ 	) (*commentmodel.Comment, error)
+ 	SoftDeleteData(
+ 		ctx context.Context,
+-		id int,
++		data *commentmodel.CommentDelete,
+ 	) error
+ }
+ 
+@@ -39,9 +39,7 @@
+ 		return common.ErrEntityDeleted(commentmodel.EntityName, nil)
+ 	}
+ 
+-	biz.pubsub.Publish(ctx, common.TopicDeleteComment, pubsub.NewMessage(data))
+-
+-	if err := biz.store.SoftDeleteData(ctx, data.CommentId); err != nil {
++	if err := biz.store.SoftDeleteData(ctx, data); err != nil {
+ 		return common.ErrCannotDeleteEntity(commentmodel.EntityName, err)
+ 	}
+ 
+Index: modules/comment/transport/gincomment/delete_comment.go
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package gincomment\r\n\r\nimport (\r\n\t\"github.com/gin-gonic/gin\"\r\n\t\"instago2/common\"\r\n\t\"instago2/component\"\r\n\t\"instago2/modules/comment/commentbiz\"\r\n\t\"instago2/modules/comment/commentmodel\"\r\n\t\"instago2/modules/comment/commentstorage\"\r\n\t\"net/http\"\r\n)\r\n\r\n// DeleteComment godoc\r\n// @Summary      Delete a comment\r\n// @Description  Delete a comment by comment ID\r\n// @Tags         comments\r\n// @Accept       json\r\n// @Param Authorization header string true \"Insert your access token\" default(Bearer <Add access token here>)\r\n// @Param        id   path      string  true \"id of the comment that user want to delete (encoded in uuid)\"\r\n// @Success      200  {object}  common.successRes\r\n// @Failure      400  {object}  common.AppError\r\n// @Failure      404  {object}  common.AppError\r\n// @Failure      500  {object}  common.AppError\r\n// @Router       /comments/{id} [delete]\r\nfunc DeleteComment(appCtx component.AppContext) gin.HandlerFunc {\r\n\treturn func(c *gin.Context) {\r\n\t\tuid, err := common.FromBase58(c.Param(\"id\"))\r\n\r\n\t\tif err != nil {\r\n\t\t\tpanic(common.ErrInvalidRequest(err))\r\n\t\t}\r\n\t\tdata := commentmodel.CommentDelete{\r\n\t\t\tCommentId: int(uid.GetLocalID()),\r\n\t\t}\r\n\t\tstore := commentstorage.NewSQLStore(appCtx.GetMainDBConnection())\r\n\t\tbiz := commentbiz.NewDeleteCommentBiz(store, appCtx.GetPubsub())\r\n\r\n\t\tif err := biz.DeleteComment(c.Request.Context(), &data); err != nil {\r\n\t\t\tpanic(err)\r\n\t\t}\r\n\r\n\t\tc.JSON(http.StatusOK, common.SimpleSuccessResponse(true))\r\n\t}\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/modules/comment/transport/gincomment/delete_comment.go b/modules/comment/transport/gincomment/delete_comment.go
+--- a/modules/comment/transport/gincomment/delete_comment.go	
++++ b/modules/comment/transport/gincomment/delete_comment.go	
+@@ -29,8 +29,10 @@
+ 		if err != nil {
+ 			panic(common.ErrInvalidRequest(err))
+ 		}
++		requester := c.MustGet(common.CurrentUser).(common.Requester)
+ 		data := commentmodel.CommentDelete{
+ 			CommentId: int(uid.GetLocalID()),
++			UserId:    requester.GetUserId(),
+ 		}
+ 		store := commentstorage.NewSQLStore(appCtx.GetMainDBConnection())
+ 		biz := commentbiz.NewDeleteCommentBiz(store, appCtx.GetPubsub())
+Index: modules/comment/commentstorage/delete.go
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package commentstorage\r\n\r\nimport (\r\n\t\"context\"\r\n\t\"instago2/common\"\r\n\t\"instago2/modules/comment/commentmodel\"\r\n)\r\n\r\nfunc (s *sqlStore) SoftDeleteData(\r\n\tctx context.Context,\r\n\tid int,\r\n) error {\r\n\tdb := s.db\r\n\r\n\tif err := db.Table(commentmodel.Comment{}.TableName()).\r\n\t\tWhere(\"id = ? OR parent_id = ?\", id, id).Updates(map[string]interface{}{\r\n\t\t\"status\": 0,\r\n\t}).Error; err != nil {\r\n\t\treturn common.ErrDB(err)\r\n\t}\r\n\r\n\treturn nil\r\n}\r\n\r\nfunc (s *sqlStore) SoftDeleteDataList(\r\n\tctx context.Context,\r\n\tpostId int,\r\n) error {\r\n\tdb := s.db\r\n\r\n\tif err := db.Table(commentmodel.Comment{}.TableName()).\r\n\t\tWhere(\"post_id = ?\", postId).Where(\"status in (1)\").Updates(map[string]interface{}{\r\n\t\t\"status\": 0,\r\n\t}).Error; err != nil {\r\n\t\treturn common.ErrDB(err)\r\n\t}\r\n\r\n\treturn nil\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/modules/comment/commentstorage/delete.go b/modules/comment/commentstorage/delete.go
+--- a/modules/comment/commentstorage/delete.go	
++++ b/modules/comment/commentstorage/delete.go	
+@@ -8,14 +8,15 @@
+ 
+ func (s *sqlStore) SoftDeleteData(
+ 	ctx context.Context,
+-	id int,
++	data *commentmodel.CommentDelete,
+ ) error {
+ 	db := s.db
+ 
+ 	if err := db.Table(commentmodel.Comment{}.TableName()).
+-		Where("id = ? OR parent_id = ?", id, id).Updates(map[string]interface{}{
+-		"status": 0,
+-	}).Error; err != nil {
++		Where("id = ? OR parent_id = ? AND user_id = ?", data.CommentId, data.CommentId, data.UserId).
++		Updates(map[string]interface{}{
++			"status": 0,
++		}).Error; err != nil {
+ 		return common.ErrDB(err)
+ 	}
+ 
+Index: Dockerfile
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>FROM golang:1.17-alpine3.15\r\nWORKDIR /app\r\nCOPY . .\r\nRUN go build -o main main.go\r\n\r\nCMD [\"/app/main\"]\r\n\r\n\r\nFROM mysql:5.7\r\n\r\n\r\n\r\n\r\nRUN sed -i \"s/^user.*/user = root/g\" /etc/mysql/my.cnf\r\n\r\nRUN chown -R mysql /var/lib/mysql\r\nRUN chgrp -R mysql /var/lib/mysql
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Dockerfile b/Dockerfile
+--- a/Dockerfile	
++++ b/Dockerfile	
+@@ -4,14 +4,3 @@
+ RUN go build -o main main.go
+ 
+ CMD ["/app/main"]
+-
+-
+-FROM mysql:5.7
+-
+-
+-
+-
+-RUN sed -i "s/^user.*/user = root/g" /etc/mysql/my.cnf
+-
+-RUN chown -R mysql /var/lib/mysql
+-RUN chgrp -R mysql /var/lib/mysql
+\ No newline at end of file
+Index: modules/post/postbiz/delete_post.go
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package postbiz\r\n\r\nimport (\r\n\t\"context\"\r\n\t\"instago2/common\"\r\n\t\"instago2/modules/post/postmodel\"\r\n\t\"instago2/pubsub\"\r\n)\r\n\r\ntype DeletePostStore interface {\r\n\tFindDataByCondition(\r\n\t\tctx context.Context,\r\n\t\tconditions map[string]interface{},\r\n\t\tmoreKeys ...string,\r\n\t) (*postmodel.Post, error)\r\n\tSoftDeleteData(\r\n\t\tctx context.Context,\r\n\t\tdata *postmodel.PostDelete,\r\n\t) error\r\n}\r\n\r\ntype deletePostBiz struct {\r\n\tstore  DeletePostStore\r\n\tpubsub pubsub.Pubsub\r\n}\r\n\r\nfunc NewDeletePostBiz(store DeletePostStore, pubsub pubsub.Pubsub) *deletePostBiz {\r\n\treturn &deletePostBiz{store: store, pubsub: pubsub}\r\n}\r\n\r\nfunc (biz *deletePostBiz) DeletePost(ctx context.Context, data *postmodel.PostDelete) error {\r\n\toldData, err := biz.store.FindDataByCondition(ctx, map[string]interface{}{\"id\": data.PostId})\r\n\r\n\tif err != nil {\r\n\t\treturn common.ErrCannotGetEntity(postmodel.EntityName, err)\r\n\t}\r\n\r\n\tif oldData.Status == 0 {\r\n\t\treturn common.ErrEntityDeleted(postmodel.EntityName, nil)\r\n\t}\r\n\r\n\tbiz.pubsub.Publish(ctx, common.TopicDeletePost, pubsub.NewMessage(data))\r\n\r\n\tif err := biz.store.SoftDeleteData(ctx, data); err != nil {\r\n\t\treturn common.ErrCannotDeleteEntity(postmodel.EntityName, err)\r\n\t}\r\n\r\n\treturn nil\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/modules/post/postbiz/delete_post.go b/modules/post/postbiz/delete_post.go
+--- a/modules/post/postbiz/delete_post.go	
++++ b/modules/post/postbiz/delete_post.go	
+@@ -29,7 +29,7 @@
+ }
+ 
+ func (biz *deletePostBiz) DeletePost(ctx context.Context, data *postmodel.PostDelete) error {
+-	oldData, err := biz.store.FindDataByCondition(ctx, map[string]interface{}{"id": data.PostId})
++	oldData, err := biz.store.FindDataByCondition(ctx, map[string]interface{}{"id": data.PostId, "user_id": data.UserId})
+ 
+ 	if err != nil {
+ 		return common.ErrCannotGetEntity(postmodel.EntityName, err)
+Index: common/pubsub_topic.go
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package common\r\n\r\nimport \"instago2/pubsub\"\r\n\r\nconst (\r\n\tTopicDeletePost    pubsub.Topic = \"TopicDeletePost\"\r\n\tTopicDeleteComment pubsub.Topic = \"TopicDeleteComment\"\r\n)\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/common/pubsub_topic.go b/common/pubsub_topic.go
+--- a/common/pubsub_topic.go	
++++ b/common/pubsub_topic.go	
+@@ -3,6 +3,5 @@
+ import "instago2/pubsub"
+ 
+ const (
+-	TopicDeletePost    pubsub.Topic = "TopicDeletePost"
+-	TopicDeleteComment pubsub.Topic = "TopicDeleteComment"
++	TopicDeletePost pubsub.Topic = "TopicDeletePost"
+ )
+Index: modules/user/usertransport/ginuser/search_by_name.go
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package ginuser\r\n\r\nimport (\r\n\t\"github.com/gin-gonic/gin\"\r\n\t\"instago2/common\"\r\n\t\"instago2/component\"\r\n\t\"instago2/modules/user/userbiz\"\r\n\t\"instago2/modules/user/userstorage\"\r\n\t\"net/http\"\r\n)\r\n\r\n// SearchUserByName godoc\r\n// @Summary      SearchUserByName\r\n// @Description  Search other user by username, first name or last name\r\n// @Tags         users\r\n// @Accept       json\r\n// @Produce \t json\r\n// @Param \t\t Authorization header string true \"Insert your access token\" default(Bearer <Add access token here>)\r\n// @Param        searchKey   path      string  true \"username, lastname or firstname of other user that current user want to search\"\r\n// @Success      200  {object}  []common.SimpleUser\r\n// @Failure      400  {object}  common.AppError\r\n// @Failure      404  {object}  common.AppError\r\n// @Failure      500  {object}  common.AppError\r\n// @Router       /users/search/{searchKey} [GET]\r\nfunc SearchUserByName(appCtx component.AppContext) gin.HandlerFunc {\r\n\treturn func(c *gin.Context) {\r\n\t\tsearchKey := c.Param(\"searchKey\")\r\n\t\tstore := userstorage.NewSQLStore(appCtx.GetMainDBConnection())\r\n\t\tbiz := userbiz.SearchUserByNameBiz(store)\r\n\r\n\t\tdata, err := biz.SearchUserByName(c.Request.Context(), searchKey)\r\n\t\tif err != nil {\r\n\t\t\tpanic(err)\r\n\t\t}\r\n\r\n\t\tfor i := range data {\r\n\t\t\tdata[i].Mask(false)\r\n\r\n\t\t}\r\n\r\n\t\tc.JSON(http.StatusOK, common.SimpleSuccessResponse(data))\r\n\r\n\t}\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/modules/user/usertransport/ginuser/search_by_name.go b/modules/user/usertransport/ginuser/search_by_name.go
+--- a/modules/user/usertransport/ginuser/search_by_name.go	
++++ b/modules/user/usertransport/ginuser/search_by_name.go	
+@@ -25,16 +25,25 @@
+ func SearchUserByName(appCtx component.AppContext) gin.HandlerFunc {
+ 	return func(c *gin.Context) {
+ 		searchKey := c.Param("searchKey")
++		var paging common.Paging
++		if err := c.ShouldBind(&paging); err != nil {
++			panic(common.ErrInvalidRequest(err))
++		}
++		paging.Fulfill()
++
+ 		store := userstorage.NewSQLStore(appCtx.GetMainDBConnection())
+ 		biz := userbiz.SearchUserByNameBiz(store)
+ 
+-		data, err := biz.SearchUserByName(c.Request.Context(), searchKey)
++		data, err := biz.SearchUser(c.Request.Context(), searchKey, &paging)
+ 		if err != nil {
+ 			panic(err)
+ 		}
+ 
+ 		for i := range data {
+ 			data[i].Mask(false)
++			if i == len(data)-1 {
++				paging.NextCursor = data[i].FakeId.String()
++			}
+ 
+ 		}
+ 
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_11_3_2022_12_09_AM__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_11_3_2022_12_09_AM__Changes_.xml
+new file mode 100644
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_10_3_2022_1_35_PM__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_10_3_2022_1_35_PM__Changes_.xml
+new file mode 100644
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_10_3_2022_1_35_PM_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_10_3_2022_1_35_PM_[Changes]/shelved.patch
+new file mode 100644
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_11_3_2022_12_09_AM_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_11_3_2022_12_09_AM_[Changes]/shelved.patch
+new file mode 100644
